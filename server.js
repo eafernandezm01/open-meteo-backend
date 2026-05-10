@@ -1,7 +1,13 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
 const PORT = 3000;
+
+// Middleware para JSON
+app.use(express.json());
+// Permitimos peticiones desde otros orígenes (Angular)
+app.use(cors());
 
 /*
 ========================================
